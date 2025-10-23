@@ -11,21 +11,21 @@
 	  defer
 	></script>
 	<script>
-  window.tikTokPixelId = "68f06697adf6c96d6fe412c6";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
-  document.head.appendChild(a);
-</script>
+	window.tikTokPixelId = "68f06697adf6c96d6fe412c6";
+	var a = document.createElement("script");
+	a.setAttribute("async", "");
+	a.setAttribute("defer", "");
+	a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
+	document.head.appendChild(a);
+	</script>
 	<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-<link rel="preload" href="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/68dfab51ddecda07f3ca7b9e/v4/player.js" as="script">
-<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/68dfaae213938540392ffad1/main.m3u8" as="fetch">
-<link rel="dns-prefetch" href="https://cdn.converteai.net">
-<link rel="dns-prefetch" href="https://scripts.converteai.net">
-<link rel="dns-prefetch" href="https://images.converteai.net">
-<link rel="dns-prefetch" href="https://api.vturb.com.br">
+	<link rel="preload" href="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/68dfab51ddecda07f3ca7b9e/v4/player.js" as="script">
+	<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+	<link rel="preload" href="https://cdn.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/68dfaae213938540392ffad1/main.m3u8" as="fetch">
+	<link rel="dns-prefetch" href="https://cdn.converteai.net">
+	<link rel="dns-prefetch" href="https://scripts.converteai.net">
+	<link rel="dns-prefetch" href="https://images.converteai.net">
+	<link rel="dns-prefetch" href="https://api.vturb.com.br">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BioBooster</title>
@@ -40,7 +40,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f7f7f7;
+      background: #f7f7f7; /* Fundo suave para contraste */
       color: #222;
       display: flex;
       flex-direction: column;
@@ -61,6 +61,7 @@
     .video-container {
       padding: 20px;
     }
+    /* O player já tem max-width: 400px e margin: auto, o que é ótimo. */
 
     /* 4. CONTADOR DE PESSOAS */
     .watching-counter {
@@ -79,15 +80,15 @@
 
     /* 5. SEÇÃO DE OFERTAS */
     .offers {
-      display: none;
+      display: none; /* Mantido para o script Vturb */
       width: 100%;
-      max-width: 1140px;
+      max-width: 1140px; /* Largura máxima para desktop */
       margin: 20px auto;
       padding: 0 20px;
     }
     .offers-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Padrão Mobile: 1 coluna */
       gap: 24px;
     }
     .offer-card {
@@ -105,17 +106,17 @@
     .offer-header {
       background: #1f2937;
       color: #fff;
-      width: calc(100% + 32px);
-      margin-top: -16px;
+      width: calc(100% + 32px); /* Compensa o padding do card */
+      margin-top: -16px; /* Puxa para o topo */
       padding: 8px;
       font-weight: 600;
       font-size: 1.1rem;
-      border-bottom: 4px solid #009100;
+      border-bottom: 4px solid #009100; /* Detalhe de destaque */
     }
     .offer-img {
       width: 100%;
       max-width: 180px;
-      height: auto;
+      height: auto; /* Garante a proporção correta da imagem */
       margin: 24px auto;
       border-radius: 8px;
       object-fit: cover;
@@ -168,19 +169,10 @@
       color: #333;
     }
 
-    /* NOVOS ESTILOS */
-    .stock-section {
-      text-align: center;
-      margin: 32px 0;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #ff0000;
-    }
-
     /* 6. SEÇÃO DE REFERÊNCIAS */
     .references {
       width: 100%;
-      max-width: 800px;
+      max-width: 800px; /* Largura ideal para leitura no desktop */
       margin: 40px auto;
       padding: 0 20px;
     }
@@ -211,17 +203,16 @@
       background: #e9e9e9;
       font-size: 0.9rem;
       color: #555;
-      margin-top: auto;
+      margin-top: auto; /* Empurra para o final da página */
     }
 
     /* 8. MEDIA QUERIES PARA RESPONSIVIDADE */
+    /* Para Tablets e Desktops */
     @media (min-width: 768px) {
       .offers-grid {
+        /* Layout flexível: cria colunas de no mínimo 290px */
         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       }
-      .offer-158 { order: 1; }
-      .offer-294 { order: 2; }
-      .offer-207 { order: 3; }
     }
   </style>
 </head>
@@ -231,7 +222,7 @@
   </div>
 
   <div class="video-container">
-	  <vturb-smartplayer id="vid-68dfab51ddecda07f3ca7b9e" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/68dfab51ddecda07f3ca7b9e/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+    <vturb-smartplayer id="vid-68dfab51ddecda07f3ca7b9e" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/68dfab51ddecda07f3ca7b9e/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
   </div>
   
   <div class="watching-counter">
@@ -241,25 +232,8 @@
 
   <div class="offers esconder">
     <div class="offers-grid">
-      <div class="offer-card offer-294">
-        <div class="offer-header">Best Value!<br>180 Days, 6 Bottles</div>
-        <img src="img/6bottlesbioboosterebook.png" alt="6 frascos de BioBooster com ebook" class="offer-img">
-        <div class="price">$49 <span>per bottle</span></div>
-        <div class="savings">YOU SAVE $474!</div>
-        <div class="guarantee">BIGGEST DISCOUNT<br>60 DAYS GUARANTEE</div>
-        <a href="https://biopeak.mycartpanda.com/checkout/192542976:1?afid=GMfyJXPKXg" target="_blank" rel="noopener" class="btn-offer">BUY NOW</a>
-        <div class="offer-total">Total: $294<br>+ FREE SHIPPING</div>
-      </div>
-      <div class="offer-card offer-207">
-        <div class="offer-header">Most Popular<br>90 Days, 3 Bottles</div>
-        <img src="img/3bottlesbioboosterebook.png" alt="3 frascos de BioBooster com ebook" class="offer-img">
-        <div class="price">$69 <span>per bottle</span></div>
-        <div class="savings">YOU SAVE $207!</div>
-        <div class="guarantee">60 DAYS GUARANTEE</div>
-        <a href="https://biopeak.mycartpanda.com/checkout/188969853:1?afid=GMfyJXPKXg" target="_blank" rel="noopener" class="btn-offer">BUY NOW</a>
-        <div class="offer-total">Total: $207<br>+ FREE SHIPPING</div>
-      </div>
-      <div class="offer-card offer-158">
+
+      <div class="offer-card">
         <div class="offer-header">Try Two<br>60 Days, 2 Bottles</div>
         <img src="img/2bottlesbiobooster.png" alt="2 frascos de BioBooster" class="offer-img">
         <div class="price">$79 <span>per bottle</span></div>
@@ -268,10 +242,27 @@
         <a href="https://biopeak.mycartpanda.com/checkout/188969852:1?afid=GMfyJXPKXg" target="_blank" rel="noopener" class="btn-offer">BUY NOW</a>
         <div class="offer-total">Total: $158<br>+ $19.99 SHIPPING</div>
       </div>
-    </div>
 
-    <div class="stock-section">
-      <span class="stock-amount">67</span>&nbsp;bottles in stock
+      <div class="offer-card">
+        <div class="offer-header">Best Value!<br>180 Days, 6 Bottles</div>
+        <img src="img/6bottlesbioboosterebook.png" alt="6 frascos de BioBooster com ebook" class="offer-img">
+        <div class="price">$49 <span>per bottle</span></div>
+        <div class="savings">YOU SAVE $474!</div>
+        <div class="guarantee">BIGGEST DISCOUNT<br>60 DAYS GUARANTEE</div>
+        <a href="https://biopeak.mycartpanda.com/checkout/192542976:1?afid=GMfyJXPKXg" target="_blank" rel="noopener" class="btn-offer">BUY NOW</a>
+        <div class="offer-total">Total: $294<br>+ FREE SHIPPING</div>
+      </div>
+
+      <div class="offer-card">
+        <div class="offer-header">Most Popular<br>90 Days, 3 Bottles</div>
+        <img src="img/3bottlesbioboosterebook.png" alt="3 frascos de BioBooster com ebook" class="offer-img">
+        <div class="price">$69 <span>per bottle</span></div>
+        <div class="savings">YOU SAVE $207!</div>
+        <div class="guarantee">60 DAYS GUARANTEE</div>
+        <a href="https://biopeak.mycartpanda.com/checkout/188969853:1?afid=GMfyJXPKXg" target="_blank" rel="noopener" class="btn-offer">BUY NOW</a>
+        <div class="offer-total">Total: $207<br>+ FREE SHIPPING</div>
+      </div>
+
     </div>
   </div>
 
@@ -328,74 +319,18 @@
       function updateCount() {
         const upChance = Math.random();
         if (upChance < 0.65) {
-          count += Math.floor(Math.random() * 8) + 1;
+          count += Math.floor(Math.random() * 8) + 1; // +1 to +8
         } else {
-          count -= Math.floor(Math.random() * 3) + 1;
+          count -= Math.floor(Math.random() * 3) + 1; // -1 to -3
         }
         if (count < min) count = min;
         countElem.textContent = count;
 
-        const delay = Math.floor(Math.random() * 2000) + 1800;
+        const delay = Math.floor(Math.random() * 2000) + 1800; // 1800–3800ms
         setTimeout(updateCount, delay);
       }
+
       updateCount();
-    })();
-
-    // SCRIPT DO CONTADOR DE ESTOQUE (LÓGICA "NATURAL" E PROGRESSIVA)
-    (function() {
-      const stockCounterElement = document.querySelector(".stock-amount");
-      if (!stockCounterElement) return;
-
-      const minStock = 18;
-      const decrements = [2, 3, 6];
-
-      function decreaseStock() {
-        let currentStock = parseInt(stockCounterElement.textContent, 10);
-        if (currentStock <= minStock) {
-          return false; // Para o loop
-        }
-        const randomDecrement = decrements[Math.floor(Math.random() * decrements.length)];
-        currentStock -= randomDecrement;
-        if (currentStock < minStock) {
-          currentStock = minStock;
-        }
-        stockCounterElement.textContent = currentStock;
-        return true; // Continua o loop
-      }
-
-      function scheduleNextUpdate(updateCount) {
-        if (!decreaseStock()) {
-          return;
-        }
-        updateCount++;
-        let nextDelay;
-
-        // Define o próximo delay baseado em quantas atualizações já ocorreram
-        if (updateCount <= 4) {
-          // Fase 1 (Urgência): Próxima atualização entre 7 e 15 segundos
-          nextDelay = Math.floor(Math.random() * 8000) + 7000;
-        } else if (updateCount <= 9) {
-          // Fase 2 (Transição): Próxima atualização entre 30 e 60 segundos
-          nextDelay = Math.floor(Math.random() * 30000) + 30000;
-        } else {
-          // Fase 3 (Escassez): Próxima atualização entre 90 e 180 segundos (1.5 a 3 min)
-          nextDelay = Math.floor(Math.random() * 90000) + 90000;
-        }
-
-        setTimeout(() => scheduleNextUpdate(updateCount), nextDelay);
-      }
-      
-      function initializeCounter() {
-        // A primeira redução acontece logo após o delay do Vturb
-        if (typeof delaySeconds !== 'undefined') {
-          setTimeout(() => scheduleNextUpdate(0), delaySeconds * 1000);
-        } else {
-          console.warn("Variável 'delaySeconds' não encontrada. Usando fallback de 3000ms.");
-          setTimeout(() => scheduleNextUpdate(0), 3000);
-        }
-      }
-      
-      initializeCounter();
     })();
   </script>
   
@@ -416,8 +351,4 @@
 	</script>
 
 </body>
-
 </html>
-
-
-
